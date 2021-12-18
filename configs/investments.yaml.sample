@@ -1,7 +1,11 @@
 stocks:
-  - VOO: 10
-  - VTI: 10
-  - VXUS: 10
+  actualAccount: "Index Funds"
+  tickers:
+    - VOO: 10
+    - VTI: 10
+    - VXUS: 10
 crypto:
-  - ETH: 10
-  - BTC: 10
+  actualAccount: "Coinbase"
+  tickers:
+    - ETH: 10
+    - BTC: 10
