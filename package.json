@@ -16,5 +16,8 @@
     "rimraf": "^3.0.2",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "@actual-app/api": "^1.1.3"
   }
 }
