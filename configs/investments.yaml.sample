@@ -1,3 +1,4 @@
+actualBudgetId: "myBudgetId" # found under "advanced" in your Actual settings
 stocks:
   actualAccount: "Index Funds"
   tickers:
