@@ -1,4 +1,4 @@
 node_modules
 dist
 .idea
-inputs/investments.yaml
+configs/investments.yaml
