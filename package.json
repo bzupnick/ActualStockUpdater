@@ -1,0 +1,20 @@
+{
+  "name": "ActualStockUpdater",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:bzupnick/ActualStockUpdater.git",
+  "author": "bzupnick <binny@zupnick.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "NODE_ENV=development nodemon",
+    "build": "rimraf dist && tsc",
+    "start": "NODE_ENV=production node ."
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.0",
+    "nodemon": "^2.0.15",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
+  }
+}
