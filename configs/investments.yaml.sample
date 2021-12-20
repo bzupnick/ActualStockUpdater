@@ -1,4 +1,5 @@
 actualBudgetId: "myBudgetId" # found under "advanced" in your Actual settings
+cryptoCompareApiKey: "myAPIkey"
 investments:
   stocks:
     actualAccount: "Index Funds"
