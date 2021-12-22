@@ -1,9 +1,10 @@
 actualBudgetId: "myBudgetId" # found under "advanced" in your Actual settings
 cryptoCompareApiKey: "myAPIkey"
+alphaAdvantageApiKey: "myAPIkey" # https://www.alphavantage.co/support/#api-key
 investments:
   stocks:
     actualAccount: "Index Funds"
-    tickers:
+    tickers: # can only have max 5 stock tickers due to AlphaAdvantage limits
       - VOO: 10
       - VTI: 10
       - VXUS: 10
