@@ -1,4 +1,4 @@
-let config = require('./config')
+import { config } from './config'
 const axios = require('axios').default;
 
 async function getCurrentWorth() {

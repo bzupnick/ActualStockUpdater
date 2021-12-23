@@ -1,5 +1,5 @@
 let Stocks = require('stocks.js')
-let config = require('./config')
+import { config } from './config'
 
 const stocks = new Stocks(config.alphaAdvantageApiKey);
 

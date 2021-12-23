@@ -1,7 +1,7 @@
 let Actual = require('./actual');
 let MyStocks = require('./stocks');
 let MyCrypto = require('./crypto');
-let config = require('./config');
+import { config } from './config'
 
 const investmentTypes = Object.keys(config.investments);
 
