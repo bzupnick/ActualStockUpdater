@@ -1,6 +1,6 @@
-let api = require('@actual-app/api');
+export const api = require('@actual-app/api');
 
-let getAccountBalance = async function (name: string) {
+export const getAccountBalance = async function (name: string) {
     const accounts = await api.getAccounts();
 
     let totalBalance = 0;
@@ -9,9 +9,4 @@ let getAccountBalance = async function (name: string) {
     allTransactions.forEach((k:any) => totalBalance += k.amount)
     totalBalance = totalBalance / 100;
     return totalBalance;
-};
-
-module.exports = {
-    getAccountBalance: getAccountBalance,
-    api: api
 };

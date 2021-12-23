@@ -1,27 +1,28 @@
-let Actual = require('./actual');
-let MyStocks = require('./stocks');
-let MyCrypto = require('./crypto');
+import { getAccountBalance, api } from './actual'
 import { config } from './config'
+import { Stocks } from './stocks'
+import { Crypto } from './crypto'
 
 const investmentTypes = Object.keys(config.investments);
+let calculateInvestmentTypeWorth = new Map([
+    ['stocks', new Stocks()],
+    ['crypto', new Crypto()],
+]);
 
-Actual.api.runWithBudget(config.actualBudgetId, main);
+api.runWithBudget(config.actualBudgetId, main);
 
 async function main () {
-    let curIndexFundBalance: number|null = null;
-    let curCryptoBalance: number|null = null;
-    if (config.investments.stocks) {
-        curIndexFundBalance = await Actual.getAccountBalance(config.investments.stocks.actualAccount);
-    }
-    if (config.investments.crypto) {
-        curCryptoBalance = await Actual.getAccountBalance(config.investments.crypto.actualAccount);
+    let currentBalances = new Map();
+
+    for (const investmentType of investmentTypes) {
+        if (config.investments[investmentType]) {
+            currentBalances.set(investmentType, await getAccountBalance(config.investments[investmentType].actualAccount))
+        }
     }
 
-    if (curCryptoBalance) {
-        console.log(await MyStocks.getCurrentWorth());
-    }
-
-    if (curIndexFundBalance) {
-        console.log(await MyCrypto.getCurrentWorth());
+    for (const investmentType of investmentTypes) {
+        if (config.investments[investmentType]) {
+            console.log(await calculateInvestmentTypeWorth.get(investmentType)?.getCurrentWorth());
+        }
     }
 }
