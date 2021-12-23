@@ -4,12 +4,14 @@ alphaAdvantageApiKey: "myAPIkey" # https://www.alphavantage.co/support/#api-key
 investments:
   stocks:
     actualAccount: "Index Funds"
+    payeeName: "Stock Market"
     tickers: # can only have max 5 stock tickers due to AlphaAdvantage limits
       - VOO: 10
       - VTI: 10
       - VXUS: 10
   crypto:
     actualAccount: "Coinbase"
+    payeeName: "Crypto Gods"
     tickers:
       - ETH: 10
       - BTC: 10
